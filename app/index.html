@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>RadShare</title>
+  <link rel="stylesheet" href="css/app.css"/>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+</head>
+<body ng-cloak class="full-body">
+
+<div class="text-center">
+  <ul class="menu">
+    <li><a href="#/home">home</a></li>
+    <li><a href="#/chat">chat</a></li>
+    <li><a href="#/rad">RadShare</a></li>
+    <li ng-show-auth="['logout','error']"><a href="#/login">login</a></li>
+    <li ng-show-auth="'login'"><a href="#/account">account</a></li>
+  </ul>
+</div>
+  <div class="container">
+    <div ng-view></div>
+  </div>
+  <footer class="text-center">Rupert Dance, 2014. Built with AngularFire. Background from <a href="http://qrohlf.com/trianglify/">qrohlf.com/trianglify/</a></footer>
+
+  <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+  <script src="https://cdn.firebase.com/v0/firebase-simple-login.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/directives.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/service.login.js"></script>
+  <script src="js/service.firebase.js"></script>
+  <script src="js/service.changeEmail.js"></script>
+  <script src="js/module.simpleLoginTools.js"></script>
+  <script src="js/module.routeSecurity.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>
